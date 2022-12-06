@@ -4,30 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
   
-  <title>Frontend Mentor | Project tracking intro component</title>
+  <title>Project tracking</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- JavaScript -->
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
-  Product
-  Features
-  Pricing
-  Login
+  <div class="bg"></div>
+  <!-- HEADER -->
+  <header class="header__display header__position">
+    <div class="logo header__logo">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
 
-  New
+    <!-- menu -->
+    <button class="menu" type="button" onclick="openMenu()">
+      <img src="./images/icon-hamburger.svg" alt="hamburger menu navigation" class="menu-img">
+    </button>
+    
+    <!-- navigation -->
+    <nav class="nav">
+
+      <ul>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <hr>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- New
   Monograph Dashboard
 
   Powerful insights into your team
   Project planning and time tracking for agile teams
 
   Schedule a demo
-  to see a live preview
+  to see a live preview -->
   
   <footer>
     <p class="attribution">
