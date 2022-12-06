@@ -1,3 +1,45 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* HEADER */
+
+header {
+    width: min(90%, f.rem(1120));
+    margin-inline: auto;
+    padding-block: f.rem(38);
+
+    button {
+        background-color: transparent;
+    }
+
+    nav {
+        background-color: white;
+        padding: f.rem(30);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translateY(-200%);
+        transition: transform .3s ease-in;
+
+        ul {
+
+            li:last-child {
+                a {
+                    color: var(--clr-neutral-400);
+                }
+            }
+
+            li:not(:last-child) {
+                margin-bottom: f.rem(32);
+
+                a {
+                    color: var(--clr-neutral-800);
+                }
+            }
+        }
+    }
+
+    .close-nav {
+        transform: translateY(0);
+    }
+}
