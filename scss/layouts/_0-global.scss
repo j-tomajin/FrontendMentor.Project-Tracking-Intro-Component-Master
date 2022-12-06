@@ -1,3 +1,37 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 @use '../utils/fonts' as font;
+/* GLOBAL */
+body {
+    font-size: f.rem(18);
+    position: relative;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+.cta, .nav {
+    font-family: font.$barlow-condensed;
+    font-weight: 700;
+}
+
+p {
+    font-family: font.$barlow;
+}
+
+.bg {
+    background: var(--clr-neutral-200);
+    padding: 1px;
+    height: 20vh;
+    width: 50vw;
+    border-radius: 0 0 0 f.rem(32); 
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    // Change color based on your needs
+    border-top:1px solid var(--clr-neutral-400);
+    // Change margins based on your needs
+    margin: 28px 0;
+}
