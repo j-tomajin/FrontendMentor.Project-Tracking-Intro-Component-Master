@@ -22,7 +22,8 @@ body {
     flex-direction: column;
 }
 
-input, button, textarea, select {
+input, button, textarea, 
+select {
     font: inherit;
 }
 
@@ -42,16 +43,6 @@ summary {
 	list-style: none;
     margin: 0;
     padding: 0;
-}
-
-hr {
-    display:block;
-    height:1px;
-    border:0;  
-    // Change color based on your needs
-    border-top:1px solid #cccccc;
-    // Change margins based on your needs
-    margin:1em 0;
 }
 
 #root, #__next {
