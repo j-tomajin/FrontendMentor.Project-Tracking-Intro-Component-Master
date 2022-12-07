@@ -28,8 +28,14 @@
     &__display {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-areas: 
+            'img'
+            'content';
         gap: f.rem(100);
+
+        .main__img {
+            grid-area: img;
+        }
 
         .content__display {
             .head {
@@ -45,6 +51,16 @@
                     gap: f.rem(20);
                 }
             }
+
+            grid-area: content;
+        }
+    }
+
+    @include bp.breakpointMin(medium-screen) {
+        &__display {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+                'content img';
         }
     }
 }
