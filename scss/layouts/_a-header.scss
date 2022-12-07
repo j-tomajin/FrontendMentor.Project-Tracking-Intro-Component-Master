@@ -3,7 +3,7 @@
 /* HEADER */
 
 header {
-    width: min(90%, f.rem(1120));
+    width: min(90%, f.rem(1155));
     margin-inline: auto;
     padding-block: f.rem(38);
 
@@ -44,6 +44,8 @@ header {
     }
 
     @include bp.breakpointMin(medium-screen) {
+        padding-block: f.rem(38) f.rem(130);
+
         nav {
             background: transparent;
             transform: translateY(0);
