@@ -1,6 +1,7 @@
 :root {
   /* PRIMARY */
   --clr-primary: hsl(0, 100%, 68%);
+  --clr-primary-hover: hsl(0, 100%, 75%);
   /* NEUTRAL */
   --clr-neutral-800: hsl(230, 29%, 20%);
   --clr-neutral-500: hsl(230, 11%, 40%);
@@ -213,17 +214,17 @@ header .show-nav {
 .main__container .main__content .content .demo {
   --letter-spacing: 1px;
 }
-.main__container .main__content .content .demo a {
+.main__container .main__content .content .demo a, .main__container .main__content .content .demo span {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.main__container .main__content .content .demo a:first-child {
+.main__container .main__content .content .demo a {
   background-color: var(--clr-primary);
   padding: 1rem 1.375rem;
   color: var(--clr-neutral-200);
   border-radius: 0.5rem;
 }
-.main__container .main__content .content .demo a:last-child {
+.main__container .main__content .content .demo span {
   letter-spacing: var(--letter-spacing);
   color: var(--clr-neutral-400);
 }
@@ -237,8 +238,11 @@ header .show-nav {
   .main__container .main__content .content .demo {
     --letter-spacing: 3px;
   }
-  .main__container .main__content .content .demo a:first-child {
+  .main__container .main__content .content .demo a {
     padding: 1rem 2rem;
+  }
+  .main__container .main__content .content .demo a:hover {
+    background-color: var(--clr-primary-hover);
   }
 }
 
@@ -284,6 +288,11 @@ header .show-nav {
   gap: 1.25rem;
 }
 @media (min-width: 48.75em) {
+  .main__display .content__display .content .demo {
+    gap: 2rem;
+  }
+}
+@media (min-width: 48.75em) {
   .main__display {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "content img";
@@ -309,6 +318,27 @@ header .show-nav {
   .header__position nav {
     position: unset;
     width: unset;
+  }
+  .header__position nav ul li a {
+    position: relative;
+  }
+  .header__position nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-neutral-800);
+    transition: width 0.3s ease-in-out;
+  }
+  .header__position nav ul li a:hover::after {
+    width: 100%;
+  }
+  .header__position nav ul li:nth-of-type(4) a::after {
+    background-color: var(--clr-neutral-400);
   }
 }
 
