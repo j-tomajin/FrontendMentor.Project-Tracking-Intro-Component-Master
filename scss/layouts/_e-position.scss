@@ -17,3 +17,30 @@
         bottom: f.rem(-300);
     }
 }
+
+/* FOOTER POSITION */
+footer {
+    @include bp.breakpointMin(medium-screen) {
+        /* Hover effect on links */
+        .attribution a { 
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-inline: auto;
+                width: 0;
+                height: 2px;
+                background-color: var(--clr-neutral-800);
+                transition: width .3s ease-in-out;
+            }
+        
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
