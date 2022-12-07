@@ -1,3 +1,73 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* MAIN */
+
+.main {
+    margin-bottom: f.rem(100);
+    width: 100%;
+
+    &__container {
+        --margin-bottom: 2rem;
+        overflow: hidden;
+
+        .main__img {
+            width: 140%;
+        }
+
+        .main__content {
+            width: min(90%, f.rem(475));
+            margin-inline: auto;
+
+            .head {
+                margin-bottom: var(--margin-bottom);
+
+                span {
+                    padding: f.rem(8) f.rem(12);
+                    background-color: var(--clr-neutral-800);
+                    color: var(--clr-neutral-200);
+                    border-radius: 50px;
+                }
+
+                .category {
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+            }
+
+            .content {
+
+                h1 {
+                    font-size: f.rem(48);
+                    text-transform: uppercase;
+                    line-height: 1;
+                    margin-bottom: var(--margin-bottom);
+                }
+
+                p {
+                    --margin-bottom: 3rem;
+
+                    font-size: f.rem(18);
+                    margin-bottom: var(--margin-bottom);
+                }
+
+                .demo {
+                    a {
+                        font-size: f.rem(16);
+                        text-transform: uppercase;
+                    }
+
+                    a:first-child {
+                        background-color: var(--clr-primary);
+                        padding: f.rem(16) f.rem(22);
+                        color: var(--clr-neutral-200);
+                        border-radius: f.rem(8);
+                    }
+
+                    a:last-child  {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
