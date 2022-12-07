@@ -7,6 +7,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include bp.breakpointMin(medium-screen) {
+        button {
+            display: none;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                gap: f.rem(44);
+            }
+        }
+    }
 }
 
 /* DISPLAY FOR MAIN */
