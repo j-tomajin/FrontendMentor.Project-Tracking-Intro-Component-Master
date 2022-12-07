@@ -38,4 +38,13 @@ hr {
     border-top:1px solid var(--clr-neutral-400);
     // Change margins based on your needs
     margin: 28px 0;
+
+    @include bp.breakpointMin(medium-screen) {
+        height: 6px;
+        width: 6px;
+        border-top: none;
+        background-color: var(--clr-neutral-400);
+        margin: 0 16px;
+        border-radius: 50%;
+    }
 }
