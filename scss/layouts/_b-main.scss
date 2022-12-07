@@ -55,19 +55,19 @@
                 .demo {
                     --letter-spacing: 1px;
 
-                    a {
+                    a, span {
                         font-size: f.rem(16);
                         text-transform: uppercase;
                     }
 
-                    a:first-child {
+                    a {
                         background-color: var(--clr-primary);
                         padding: f.rem(16) f.rem(22);
                         color: var(--clr-neutral-200);
                         border-radius: f.rem(8);
                     }
 
-                    a:last-child  {
+                    span  {
                         letter-spacing: var(--letter-spacing);
                         color: var(--clr-neutral-400);
                     }
@@ -85,8 +85,12 @@
                     .demo {
                         --letter-spacing: 3px;
 
-                        a:first-child {
+                        a {
                             padding: f.rem(16) f.rem(32);
+
+                            &:hover {
+                                background-color: var(--clr-primary-hover);
+                            }
                         }
                     }
                 }
