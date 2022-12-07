@@ -25,6 +25,19 @@
     }
 }
 
+/* MAIN POSITION */
+.main {
+    &__position {
+        
+        @include bp.breakpointMin(medium-screen) {
+            .main__img {
+                left: 50%;
+                position: absolute;
+            }
+        }
+    }
+}
+
 /* FOOTER POSITION */
 footer {
     @include bp.breakpointMin(medium-screen) {
