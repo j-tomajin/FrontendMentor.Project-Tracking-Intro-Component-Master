@@ -2,6 +2,7 @@
 @use '../utils/functions' as f;
 @use '../utils/fonts' as font;
 /* GLOBAL */
+
 body {
     font-size: f.rem(18);
     position: relative;
@@ -12,18 +13,21 @@ h4, h5, h6,
 .cta, .nav {
     font-family: font.$barlow-condensed;
     font-weight: 700;
+    color: var(--clr-neutral-800);
 }
 
-p {
+p, .barlow {
     font-family: font.$barlow;
+    color: var(--clr-neutral-400);
 }
 
 .bg {
     background: var(--clr-neutral-200);
     padding: 1px;
-    height: 20vh;
+    height: 55vh;
     width: 50vw;
     border-radius: 0 0 0 f.rem(32); 
+    z-index: -1;
 }
 
 hr {
