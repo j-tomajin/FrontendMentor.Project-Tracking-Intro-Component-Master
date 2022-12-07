@@ -87,18 +87,21 @@ h4, h5, h6,
 .cta, .nav {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
+  color: var(--clr-neutral-800);
 }
 
-p {
+p, .barlow {
   font-family: "Barlow", sans-serif;
+  color: var(--clr-neutral-400);
 }
 
 .bg {
   background: var(--clr-neutral-200);
   padding: 1px;
-  height: 20vh;
+  height: 55vh;
   width: 50vw;
   border-radius: 0 0 0 2rem;
+  z-index: -1;
 }
 
 hr {
@@ -137,15 +140,88 @@ header nav ul li:not(:last-child) {
 header nav ul li:not(:last-child) a {
   color: var(--clr-neutral-800);
 }
-header .close-nav {
+header .show-nav {
   transform: translateY(0);
 }
 
-/* MAIN */ /* SECTION */ /* DISPLAY */
+/* MAIN */
+.main {
+  margin-bottom: 6.25rem;
+  width: 100%;
+}
+.main__container {
+  --margin-bottom: 2rem;
+  overflow: hidden;
+}
+.main__container .main__img {
+  width: 140%;
+}
+.main__container .main__content {
+  width: min(90%, 29.6875rem);
+  margin-inline: auto;
+}
+.main__container .main__content .head {
+  margin-bottom: var(--margin-bottom);
+}
+.main__container .main__content .head span {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-200);
+  border-radius: 50px;
+}
+.main__container .main__content .head .category {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.main__container .main__content .content h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: var(--margin-bottom);
+}
+.main__container .main__content .content p {
+  --margin-bottom: 3rem;
+  font-size: 1.125rem;
+  margin-bottom: var(--margin-bottom);
+}
+.main__container .main__content .content .demo a {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.main__container .main__content .content .demo a:first-child {
+  background-color: var(--clr-primary);
+  padding: 1rem 1.375rem;
+  color: var(--clr-neutral-200);
+  border-radius: 0.5rem;
+}
+.main__container .main__content .content .demo a:last-child {
+  letter-spacing: 1px;
+}
+
+/* SECTION */ /* DISPLAY */
+/* DISPLAY FOR HEADER */
 .header__display {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* DISPLAY FOR MAIN */
+.main__display {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 6.25rem;
+}
+.main__display .content__display .head {
+  display: flex;
+  align-items: center;
+  gap: 1.625rem;
+}
+.main__display .content__display .content .demo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 /* POSITION */
@@ -164,18 +240,39 @@ header .close-nav {
   bottom: -18.75rem;
 }
 
+/* FOOTER POSITION */
+@media (min-width: 48.75em) {
+  footer {
+    /* Hover effect on links */
+  }
+  footer .attribution a {
+    position: relative;
+  }
+  footer .attribution a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-neutral-800);
+    transition: width 0.3s ease-in-out;
+  }
+  footer .attribution a:hover::after {
+    width: 100%;
+  }
+}
+
 /* FOOTER */
 footer {
   margin-top: auto;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
-}
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
 }
 
 /* SCROLLBAR *//*# sourceMappingURL=style.css.map */
