@@ -2,8 +2,35 @@
 @use '../utils/functions' as f;
 /* DISPLAY */
 
+/* DISPLAY FOR HEADER */
 .header__display {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* DISPLAY FOR MAIN */
+.main {
+    &__display {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: f.rem(100);
+
+        .content__display {
+            .head {
+                display: flex;
+                align-items: center;
+                gap: f.rem(26);
+            }
+
+            .content {
+                .demo {
+                    display: flex;
+                    align-items: center;
+                    gap: f.rem(20);
+                }
+            }
+        }
+    }
 }
