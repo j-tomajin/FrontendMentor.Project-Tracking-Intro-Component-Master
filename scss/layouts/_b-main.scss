@@ -9,6 +9,8 @@
     &__container {
         --margin-bottom: 2rem;
         overflow: hidden;
+        max-width: f.rem(1280);
+        margin-inline: auto;
 
         .main__img {
             width: 140%;
@@ -51,6 +53,8 @@
                 }
 
                 .demo {
+                    --letter-spacing: 1px;
+
                     a {
                         font-size: f.rem(16);
                         text-transform: uppercase;
@@ -64,7 +68,26 @@
                     }
 
                     a:last-child  {
-                        letter-spacing: 1px;
+                        letter-spacing: var(--letter-spacing);
+                        color: var(--clr-neutral-400);
+                    }
+                }
+
+                @include bp.breakpointMin(large-screen) {
+                    h1 {
+                        font-size: f.rem(64);
+                    } 
+
+                    p {
+                        padding-right: f.rem(200);
+                    }
+
+                    .demo {
+                        --letter-spacing: 3px;
+
+                        a:first-child {
+                            padding: f.rem(16) f.rem(32);
+                        }
                     }
                 }
             }
