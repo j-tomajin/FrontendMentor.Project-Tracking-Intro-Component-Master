@@ -92,7 +92,7 @@ h4, h5, h6,
 
 p, .barlow {
   font-family: "Barlow", sans-serif;
-  color: var(--clr-neutral-400);
+  color: var(--clr-neutral-500);
 }
 
 .bg {
@@ -124,7 +124,7 @@ hr {
 
 /* HEADER */
 header {
-  width: min(90%, 70rem);
+  width: min(90%, 72.1875rem);
   margin-inline: auto;
   padding-block: 2.375rem;
 }
@@ -154,6 +154,9 @@ header .show-nav {
   transform: translateY(0);
 }
 @media (min-width: 48.75em) {
+  header {
+    padding-block: 2.375rem 8.125rem;
+  }
   header nav {
     background: transparent;
     transform: translateY(0);
@@ -173,6 +176,8 @@ header .show-nav {
 .main__container {
   --margin-bottom: 2rem;
   overflow: hidden;
+  max-width: 80rem;
+  margin-inline: auto;
 }
 .main__container .main__img {
   width: 140%;
@@ -205,6 +210,9 @@ header .show-nav {
   font-size: 1.125rem;
   margin-bottom: var(--margin-bottom);
 }
+.main__container .main__content .content .demo {
+  --letter-spacing: 1px;
+}
 .main__container .main__content .content .demo a {
   font-size: 1rem;
   text-transform: uppercase;
@@ -216,7 +224,22 @@ header .show-nav {
   border-radius: 0.5rem;
 }
 .main__container .main__content .content .demo a:last-child {
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing);
+  color: var(--clr-neutral-400);
+}
+@media (min-width: 57.5em) {
+  .main__container .main__content .content h1 {
+    font-size: 4rem;
+  }
+  .main__container .main__content .content p {
+    padding-right: 12.5rem;
+  }
+  .main__container .main__content .content .demo {
+    --letter-spacing: 3px;
+  }
+  .main__container .main__content .content .demo a:first-child {
+    padding: 1rem 2rem;
+  }
 }
 
 /* SECTION */ /* DISPLAY */
@@ -241,8 +264,14 @@ header .show-nav {
 .main__display {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-areas: "img" "content";
   gap: 6.25rem;
+}
+.main__display .main__img {
+  grid-area: img;
+}
+.main__display .content__display {
+  grid-area: content;
 }
 .main__display .content__display .head {
   display: flex;
@@ -253,6 +282,12 @@ header .show-nav {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+@media (min-width: 48.75em) {
+  .main__display {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "content img";
+  }
 }
 
 /* POSITION */
@@ -274,6 +309,14 @@ header .show-nav {
   .header__position nav {
     position: unset;
     width: unset;
+  }
+}
+
+/* MAIN POSITION */
+@media (min-width: 48.75em) {
+  .main__position .main__img {
+    left: 50%;
+    position: absolute;
   }
 }
 
